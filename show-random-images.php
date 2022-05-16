@@ -27,5 +27,5 @@ define("PLUGINS_PATH_ASSETS", plugin_dir_url(__FILE__) . 'assets/');
 
 
 require_once(plugin_dir_path(__FILE__) . 'includes/enqueue-files.php');
-require_once(plugin_dir_path(__FILE__) . 'includes/backend-options.php');
-require_once(plugin_dir_path(__FILE__) . 'includes/frontend-parts.php');
+require_once(plugin_dir_path(__FILE__) . 'includes/backend.php');
+require_once(plugin_dir_path(__FILE__) . 'includes/frontend.php');
