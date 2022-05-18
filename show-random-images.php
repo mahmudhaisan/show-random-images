@@ -21,6 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 define("PLUGINS_PATH", plugin_dir_path(__FILE__));
+define("PLUGINS_URL", plugins_url(__FILE__));
 define("PLUGINS_PATH_ASSETS", plugin_dir_url(__FILE__) . 'assets/');
 
 
