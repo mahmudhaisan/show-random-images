@@ -1,0 +1,17 @@
+.random-card-image {
+    /* height: auto; */
+}
+
+.random-card-image img{
+    width: 50%;
+    height:300px !important;
+}
+
+.random-btn{
+    padding: 10px;
+}
+
+.random-card-text{
+    font-size: 18px;
+    line-height: 1.5;
+}

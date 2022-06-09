@@ -5,7 +5,7 @@ function random493_frontend_meta($atts)
 {
 
     $shortcodeArrays = shortcode_atts(array(
-        'random-img-category' => 'red'
+        'random-img-category' => 'yellow'
 
     ), $atts);
 
@@ -26,10 +26,10 @@ function random493_frontend_meta($atts)
 
     $random_images_posts = get_posts($args);
     $random_array_key = array_rand($random_images_posts);
-    print_r($random_array_key);
+    // print_r($random_array_key);
     $random_post_output = $random_images_posts[$random_array_key];
     $cpt_post_id = $random_post_output->ID;
-    $cpt_post_name = $random_post_output->post_name;
+    $cpt_post_name = $random_post_output->post_title;
     $cpt_post_content = $random_post_output->post_content;
     $cpt_post_image = get_the_post_thumbnail_url($cpt_post_id, 'full');
 
@@ -44,8 +44,11 @@ function random493_frontend_meta($atts)
     if (empty($cpt_post_image)) {
         $cpt_post_image = 'https://themesfinity.com/wp-content/uploads/2018/02/default-placeholder.png';
     }
-
+    ob_start();
     require_once(PLUGINS_PATH . 'includes/html-parts.php');
+    $contents = ob_get_contents();
+    ob_end_clean();
+    return $contents;
 }
 
 
