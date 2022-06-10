@@ -1,3 +1,12 @@
+<?php
+$random_btn_bg_color = get_option('random_settings_btn_bg_field');
+$random_btn_text_color = get_option('random_settings_btn_text_field');
+// $random_btn_text_color = get_option('random_settings_btn_text_input_field');
+
+
+?>
+
+
 <div class="">
     <div class="row random-row">
         <div class="col-md-8">
@@ -12,17 +21,12 @@
                 </div>
             </div>
 
-
-            <!-- <div class="random-card text-center min-vh-100">
-                <h3 class="random-card-title"><?php echo $cpt_post_name; ?></h3>
-                <img src="<?php echo $cpt_post_image; ?>" alt="">
-                <p class="card-text"><?php echo $cpt_post_content; ?></p>
-            </div> -->
         </div>
         <div class="col-md-4 text-center">
+            <?php echo $random_btn_color; ?>
             <div class="jumbotron d-flex align-items-center min-vh-100">
                 <div class="container text-center">
-                    <a href="?<?php echo $cpt_post_id; ?>" class="btn btn-primary random-btn ">PICK ANOTHER CARD</a>
+                    <a href="?<?php echo $cpt_post_id; ?>" class="btn btn-primary random-btn " style="background:<?php echo $random_btn_bg_color; ?>; color:<?php echo $random_btn_text_color; ?>;">PICK ANOTHER CARD</a>
                 </div>
             </div>
 
